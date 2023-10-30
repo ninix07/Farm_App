@@ -4,7 +4,11 @@ import Hen from "../../assets/Hen.png";
 import { SafeAreaView } from "react-native-safe-area-context";
 import LoginStyles from "./styles/login-style.js";
 import BiRightArrowCircle from "react-icons/bi";
-const Login = () => {
+
+const Login = ({ navigation }) => {
+  const checkAuth = () => {
+    navigation.navigate("Home");
+  };
   return (
     <SafeAreaView style={LoginStyles.mainContainer}>
       <View style={LoginStyles.Breeder}>
@@ -23,7 +27,7 @@ const Login = () => {
           style={LoginStyles.textInput}
         />
 
-        <TouchableOpacity style={LoginStyles.btn}>
+        <TouchableOpacity style={LoginStyles.btn} onPress={checkAuth}>
           <Text style={LoginStyles.textInputStyles}>Login </Text>
         </TouchableOpacity>
       </View>

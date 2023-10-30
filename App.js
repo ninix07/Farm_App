@@ -16,6 +16,17 @@ export default function App() {
             headerTitle: "",
             headerShadowVisible: false,
             headerTransparent: true,
+            // animationTypeForReplace: "slide-vertical",
+          }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Login}
+          options={{
+            // headerTitle: "",
+            headerShadowVisible: false,
+            headerTransparent: true,
+            // animationTypeForReplace: "slide-vertical",
           }}
         />
       </Stack.Navigator>
