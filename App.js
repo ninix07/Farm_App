@@ -18,202 +18,62 @@ import Ventilation from "./components/Cards/ventilation.js";
 import Vaccine from "./components/Cards/vaccine.js";
 import Female from "./components/Cards/female.js";
 import { createStackNavigator } from "@react-navigation/stack";
+import { BackHandler } from "react-native";
 const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
+        <Stack.Group
+          screenOptions={{
             headerTitle: "",
             headerShadowVisible: false,
             headerTransparent: true,
             headerLeft: null,
-
-            animationTypeForReplace: "slide-vertical",
           }}
-        />
-        <Stack.Screen
-          name="Water"
-          component={Water}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Light"
-          component={Light}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Male"
-          component={Male}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Medicine"
-          component={Medicine}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Feed"
-          component={Feed}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Egg"
-          component={Egg}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Temperature"
-          component={Temperature}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Weight"
-          component={Weight}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Transfer"
-          component={Transfer}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Ventilation"
-          component={Ventilation}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Vaccine"
-          component={Vaccine}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Humidity"
-          component={Humidity}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
-        <Stack.Screen
-          name="Female"
-          component={Female}
-          options={{
-            headerTitle: "",
-            headerShadowVisible: false,
-            headerTransparent: true,
-            headerLeft: null,
-            presentation: "transparentModal",
-            cardOverlayEnabled: true,
-            animationTypeForReplace: "slide-vertical",
-          }}
-        />
+        >
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{
+              headerTitle: "",
+              headerShadowVisible: false,
+              headerTransparent: true,
+              animationTypeForReplace: "slide-vertical",
+            }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              headerTitle: "",
+              headerShadowVisible: false,
+              headerTransparent: true,
+              headerLeft: null,
+              animationTypeForReplace: "slide-vertical",
+            }}
+          />
+          <Stack.Group
+            screenOptions={{
+              presentation: "transparentModal",
+              cardOverlayEnabled: true,
+            }}
+          >
+            <Stack.Screen name="Water" component={Water} />
+            <Stack.Screen name="Light" component={Light} />
+            <Stack.Screen name="Male" component={Male} />
+            <Stack.Screen name="Medicine" component={Medicine} />
+            <Stack.Screen name="Feed" component={Feed} />
+            <Stack.Screen name="Egg" component={Egg} />
+            <Stack.Screen name="Temperature" component={Temperature} />
+            <Stack.Screen name="Weight" component={Weight} />
+            <Stack.Screen name="Transfer" component={Transfer} />
+            <Stack.Screen name="Ventilation" component={Ventilation} />
+            <Stack.Screen name="Vaccine" component={Vaccine} />
+            <Stack.Screen name="Humidity" component={Humidity} />
+            <Stack.Screen name="Female" component={Female} />
+          </Stack.Group>
+        </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
   );
