@@ -24,7 +24,7 @@ export default function App() {
         />
         <Stack.Screen
           name="Home"
-          component={Home}
+          component={Water}
           options={{
             headerTitle: "",
             headerShadowVisible: false,

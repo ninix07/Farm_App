@@ -15,7 +15,7 @@ import Feed from "../../assets/Feed.png";
 import Egg from "../../assets/Egg.jpg";
 // import Mortality from "../../assets/mortality.png";
 import Temperature from "../../assets/Temperature.png";
-import Weight from "../../assets/Watereight.png";
+import Weight from "../../assets/Weight.png";
 import Transfer from "../../assets/Transfer.png";
 import Ventilation from "../../assets/ventilation.png";
 import Vaccine from "../../assets/vaccine.png";
