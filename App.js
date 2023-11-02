@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import Login from "./components/Login/login.js";
 import "react-native-gesture-handler";
+import Water from "./components/Cards/Water/water.js";
 import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 export default function App() {
@@ -21,11 +22,12 @@ export default function App() {
         />
         <Stack.Screen
           name="Home"
-          component={Login}
+          component={Water}
           options={{
             // headerTitle: "",
             headerShadowVisible: false,
             headerTransparent: true,
+            headerTitle: "",
             // animationTypeForReplace: "slide-vertical",
           }}
         />
