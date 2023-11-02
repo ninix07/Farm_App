@@ -35,7 +35,7 @@ const Water = () => {
         <TouchableOpacity onPress={() => setShowDatePicker(true)}>
           <TextInput
             placeholder="Date of Water Intake"
-            placeholderTextColor="#8F9BB3"
+            placeholderTextColor="#FFFFFF"
             style={styles.text_box}
             value={selectedDate.toDateString()}
             editable={false} // Disable direct editing of the input
@@ -75,9 +75,9 @@ const Water = () => {
         <Text style={styles.subtext}>lit/d</Text>
         </View>
 
-        <View style={styles.card_button}>
-          <Button title="Submit" color="#E61C38" />
-        </View>
+        <TouchableOpacity style={styles.card_button} >
+          <Text style={styles.button_text}>Submit </Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
