@@ -8,7 +8,7 @@ import { BackHandler } from "react-native";
 import DetailCard from "../DetailCard/detailCard";
 import Sunlight from "../../assets/Sunlight.png";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const onBackPress = () => {
     // Prevent going back by returning true (disabling the back action).
     return true;
@@ -49,7 +49,13 @@ const Home = () => {
         </View>
       </LinearGradient>
       <SafeAreaView>
-        <DetailCard ImageURL={Sunlight} Title="Sunlight" />
+        <DetailCard
+          ImageURL={Sunlight}
+          Title="Sunlight"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
       </SafeAreaView>
     </ScrollView>
   );

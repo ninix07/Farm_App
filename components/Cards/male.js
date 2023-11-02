@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { SafeAreaView } from "react-native-safe-area-context";
-import styles from "./styles/maleStyles";
+import styles from "./styles/cardStyles";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
 const Male = () => {
@@ -51,17 +51,17 @@ const Male = () => {
         )}
 
         {/* Pen Name (Dropdown Picker) */}
-        <View style={styles.text_box} >
-        <Picker
-          selectedValue={selectedPenName}
-          onValueChange={(itemValue, itemIndex) =>
-            setSelectedPenName(itemValue)
-        }
-        >
-          {penNames.map((name, index) => (
+        <View style={styles.text_box}>
+          <Picker
+            selectedValue={selectedPenName}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedPenName(itemValue)
+            }
+          >
+            {penNames.map((name, index) => (
               <Picker.Item key={index} label={name} value={name} />
-              ))}
-        </Picker>
+            ))}
+          </Picker>
         </View>
 
         <TextInput
@@ -77,12 +77,8 @@ const Male = () => {
         />
 
         <View style={styles.card_button}>
-        <Button
-        title="Submit"
-        color="#E61C38"
-        />
+          <Button title="Submit" color="#E61C38" />
         </View>
-        
       </View>
     </SafeAreaView>
   );
