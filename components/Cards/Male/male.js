@@ -9,10 +9,10 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { SafeAreaView } from "react-native-safe-area-context";
-import styles from "./styles/waterStyles";
+import styles from "./styles/maleStyles";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-const Water = () => {
+const Male = () => {
   const [selectedDate, setSelectedDate] = useState(new Date()); // Initialize with the current date
   const [selectedPenName, setSelectedPenName] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -29,12 +29,12 @@ const Water = () => {
   return (
     <SafeAreaView style={styles.mainView}>
       <View style={styles.card}>
-        <Text style={styles.card_title}>Water</Text>
+        <Text style={styles.card_title}>Male</Text>
 
         {/* Date of Water Intake (DatePicker) */}
         <TouchableOpacity onPress={() => setShowDatePicker(true)}>
           <TextInput
-            placeholder="Date of Water Intake"
+            placeholder="Date of Count"
             placeholderTextColor="#8F9BB3"
             style={styles.text_box}
             value={selectedDate.toDateString()}
@@ -65,7 +65,13 @@ const Water = () => {
         </View>
 
         <TextInput
-          placeholder="Amount of Water Intake"
+          placeholder="Total Male Count"
+          placeholderTextColor="#8F9BB3"
+          style={styles.text_box}
+        />
+
+        <TextInput
+          placeholder="Male Cull"
           placeholderTextColor="#8F9BB3"
           style={styles.text_box}
         />
@@ -82,4 +88,4 @@ const Water = () => {
   );
 };
 
-export default Water;
+export default Male;

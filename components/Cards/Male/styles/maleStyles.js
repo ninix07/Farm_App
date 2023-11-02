@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const waterStyles = StyleSheet.create({
+const maleStyles = StyleSheet.create({
   mainView: {
     height: "100%",
     display: "flex",
@@ -55,4 +55,4 @@ const waterStyles = StyleSheet.create({
     }
 
 });
-export default waterStyles;
+export default maleStyles;

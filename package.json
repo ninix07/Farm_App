@@ -9,13 +9,9 @@
     "web": "expo start --web"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@react-native-community/datetimepicker": "^7.6.1",
-=======
     "@react-native-community/datetimepicker": "7.2.0",
->>>>>>> 1269fbc5f87924863258143f5ba60cf927f50ffb
     "@react-native-masked-view/masked-view": "0.2.9",
-    "@react-native-picker/picker": "^2.5.1",
+    "@react-native-picker/picker": "2.4.10",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.16",
     "@react-navigation/stack": "^6.3.20",
@@ -27,12 +23,8 @@
     "react": "18.2.0",
     "react-icons": "^4.11.0",
     "react-native": "0.72.6",
-<<<<<<< HEAD
-    "react-native-gesture-handler": "~2.12.0",
-=======
     "react-native-css-transformer": "^1.2.4",
-    "react-native-gesture-handler": "^2.13.4",
->>>>>>> 1269fbc5f87924863258143f5ba60cf927f50ffb
+    "react-native-gesture-handler": "~2.12.0",
     "react-native-sass-transformer": "^2.0.0"
   },
   "devDependencies": {
