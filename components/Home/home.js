@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Profile from "../../assets/Profile.png"; // Import your image
 import HomeStyles from "./styles/home-styles";
 import { LinearGradient } from "expo-linear-gradient";
+import { BackHandler } from "react-native";
 
 const Home = () => {
   const onBackPress = () => {
