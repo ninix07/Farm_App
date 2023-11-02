@@ -5,6 +5,7 @@ import Login from "./components/Login/login.js";
 import Home from "./components/Home/home.js";
 import "react-native-gesture-handler";
 import Water from "./components/Cards/Water/water.js";
+import Male from "./components/Cards/Male/male.js";
 import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 export default function App() {
