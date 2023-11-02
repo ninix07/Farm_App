@@ -16,7 +16,7 @@ const HomeStyles = StyleSheet.create({
     fontFamily: "Roboto",
     fontSize: 36,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 20,
     marginTop: 20,
   },
   details: {
@@ -34,12 +34,20 @@ const HomeStyles = StyleSheet.create({
     fontWeight: "400",
     lineHeight: 19 /* 79.167% */,
     letterSpacing: 0.75,
-    margin: 2,
+    margin: 4,
   },
   image: {
     height: 100,
     width: 100,
     borderRadius: 50,
+  },
+  cardContainer: {
+    flexDirection: "row",
+    gap: 60,
+    flexWrap: "wrap",
+    justifyContent: "center",
+    marginTop: "10%",
+    marginBottom: "10%",
   },
 });
 export default HomeStyles;
