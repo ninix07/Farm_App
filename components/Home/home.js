@@ -6,6 +6,13 @@ import HomeStyles from "./styles/home-styles";
 import { LinearGradient } from "expo-linear-gradient";
 
 const Home = () => {
+  const onBackPress = () => {
+    // Prevent going back by returning true (disabling the back action).
+    return true;
+  };
+
+  // Add a back button listener when the screen is focused.
+  BackHandler.addEventListener("hardwareBackPress", onBackPress);
   return (
     <ScrollView>
       <LinearGradient
