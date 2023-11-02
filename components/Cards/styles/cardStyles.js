@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const vaccineStyles = StyleSheet.create({
+const cardStyles = StyleSheet.create({
   mainView: {
     height: "100%",
     display: "flex",
@@ -14,7 +14,7 @@ const vaccineStyles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#ffffff",
-    padding:28.31,
+    padding: 28.31,
     gap: 16.71,
   },
   card_title: {
@@ -25,7 +25,7 @@ const vaccineStyles = StyleSheet.create({
   },
   text_box: {
     width: "100%",
-    height:30,
+    height: 30,
     borderRadius: 15,
     borderWidth: 1,
     borderColor: "#EDF1F7",
@@ -33,7 +33,6 @@ const vaccineStyles = StyleSheet.create({
     alignContent: "center",
     justifyContent: "center",
     paddingLeft: 15,
-
   },
   text_box_placeholder: {
     fontFamily: "Roboto",
@@ -51,8 +50,7 @@ const vaccineStyles = StyleSheet.create({
     borderRadius: 18,
     borderWidth: 1,
     borderColor: "#FFFFFF",
-    marginTop:"2%",
-    }
-
+    marginTop: "2%",
+  },
 });
-export default vaccineStyles;
+export default cardStyles;

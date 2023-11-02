@@ -21,17 +21,14 @@ import Ventilation from "../../assets/ventilation.png";
 import Vaccine from "../../assets/vaccine.png";
 import Female from "../../assets/Female.png";
 
-
-
-
-const Home = () => {
-  const onBackPress = () => {
-    // Prevent going back by returning true (disabling the back action).
-    return true;
-  };
+const Home = ({ navigation }) => {
+  // const onBackPress = () => {
+  //   // Prevent going back by returning true (disabling the back action).
+  //   return true;
+  // };
 
   // Add a back button listener when the screen is focused.
-  BackHandler.addEventListener("hardwareBackPress", onBackPress);
+  // BackHandler.addEventListener("hardwareBackPress", onBackPress);
   return (
     <ScrollView>
       <LinearGradient
@@ -65,23 +62,98 @@ const Home = () => {
         </View>
       </LinearGradient>
       <SafeAreaView>
-        <DetailCard ImageURL={Sunlight} Title="Sunlight" />
-        <DetailCard ImageURL={Humidity} Title="Humidity" />
-        <DetailCard ImageURL={Male} Title="Male" />
-        <DetailCard ImageURL={Water} Title="Water" />
-        <DetailCard ImageURL={Medicine} Title="Medicine" />
-        <DetailCard ImageURL={Feed} Title="Feed" />
-        <DetailCard ImageURL={Egg} Title="Egg" />
+        <DetailCard
+          ImageURL={Sunlight}
+          Title="Sunlight"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Humidity}
+          Title="Humidity"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Male}
+          Title="Male"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Water}
+          Title="Water"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Medicine}
+          Title="Medicine"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Feed}
+          Title="Feed"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Egg}
+          Title="Egg"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
         {/* <DetailCard ImageURL={Mortality} Title="Mortality" /> */}
-        <DetailCard ImageURL={Temperature} Title="Temperature" />
-        <DetailCard ImageURL={Weight} Title="Weight" />
-        <DetailCard ImageURL={Transfer} Title="Transfer" />
-        <DetailCard ImageURL={Ventilation} Title="Ventilation" />
-        <DetailCard ImageURL={Vaccine} Title="Vaccine" />
-        <DetailCard ImageURL={Female} Title="Female" />
-
-
-        
+        <DetailCard
+          ImageURL={Temperature}
+          Title="Temperature"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Weight}
+          Title="Weight"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Transfer}
+          Title="Transfer"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Ventilation}
+          Title="Ventilation"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Vaccine}
+          Title="Vaccine"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
+        <DetailCard
+          ImageURL={Female}
+          Title="Female"
+          OnPressHandler={() => {
+            navigation.navigate("Water");
+          }}
+        />
       </SafeAreaView>
     </ScrollView>
   );

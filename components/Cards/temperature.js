@@ -9,10 +9,10 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { SafeAreaView } from "react-native-safe-area-context";
-import styles from "./styles/maleStyles";
+import styles from "./styles/cardStyles";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-const Male = () => {
+const Temperature = () => {
   const [selectedDate, setSelectedDate] = useState(new Date()); // Initialize with the current date
   const [selectedPenName, setSelectedPenName] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -29,12 +29,12 @@ const Male = () => {
   return (
     <SafeAreaView style={styles.mainView}>
       <View style={styles.card}>
-        <Text style={styles.card_title}>Male</Text>
+        <Text style={styles.card_title}>Water</Text>
 
         {/* Date of Water Intake (DatePicker) */}
         <TouchableOpacity onPress={() => setShowDatePicker(true)}>
           <TextInput
-            placeholder="Date of Count"
+            placeholder="Date of Water Intake"
             placeholderTextColor="#8F9BB3"
             style={styles.text_box}
             value={selectedDate.toDateString()}
@@ -51,41 +51,31 @@ const Male = () => {
         )}
 
         {/* Pen Name (Dropdown Picker) */}
-        <View style={styles.text_box} >
-        <Picker
-          selectedValue={selectedPenName}
-          onValueChange={(itemValue, itemIndex) =>
-            setSelectedPenName(itemValue)
-        }
-        >
-          {penNames.map((name, index) => (
+        <View style={styles.text_box}>
+          <Picker
+            selectedValue={selectedPenName}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedPenName(itemValue)
+            }
+          >
+            {penNames.map((name, index) => (
               <Picker.Item key={index} label={name} value={name} />
-              ))}
-        </Picker>
+            ))}
+          </Picker>
         </View>
 
         <TextInput
-          placeholder="Total Male Count"
-          placeholderTextColor="#8F9BB3"
-          style={styles.text_box}
-        />
-
-        <TextInput
-          placeholder="Male Cull"
+          placeholder="Amount of Water Intake"
           placeholderTextColor="#8F9BB3"
           style={styles.text_box}
         />
 
         <View style={styles.card_button}>
-        <Button
-        title="Submit"
-        color="#E61C38"
-        />
+          <Button title="Submit" color="#E61C38" />
         </View>
-        
       </View>
     </SafeAreaView>
   );
 };
 
-export default Male;
+export default Temperature;
