@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import Login from "./components/Login/login.js";
+import Home from "./components/Home/home.js";
 import "react-native-gesture-handler";
 import Water from "./components/Cards/Water/water.js";
 import Male from "./components/Cards/Male/male.js";
@@ -23,12 +24,12 @@ export default function App() {
         />
         <Stack.Screen
           name="Home"
-          component={Male}
+          component={Home}
           options={{
-            // headerTitle: "",
+            headerTitle: "",
             headerShadowVisible: false,
             headerTransparent: true,
-            headerTitle: "",
+            headerLeft: null,
             // animationTypeForReplace: "slide-vertical",
           }}
         />
