@@ -1,34 +1,41 @@
-import React, { useState } from 'react';
-import { View, Text, Picker, TouchableOpacity, TextInput, Platform } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import waterstyles from '../Water/styles/water.css';
-import DateTimePicker from '@react-native-datetimepicker/datetimepicker';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  Platform,
+} from "react-native";
+import { Picker } from "@react-native-picker/picker";
+import { SafeAreaView } from "react-native-safe-area-context";
+import styles from "./styles/waterStyles";
+import DateTimePicker from "@react-native-community/datetimepicker";
 
 const Water = () => {
   const [selectedDate, setSelectedDate] = useState(new Date()); // Initialize with the current date
-  const [selectedPenName, setSelectedPenName] = useState('');
+  const [selectedPenName, setSelectedPenName] = useState("");
   const [showDatePicker, setShowDatePicker] = useState(false);
 
-  const penNames = ['Pen 1', 'Pen 2', 'Pen 3', 'Pen 4', 'Pen 5'];
+  const penNames = ["Pen 1", "Pen 2", "Pen 3", "Pen 4", "Pen 5"];
 
   const handleDateChange = (event, selectedDate) => {
-    setShowDatePicker(Platform.OS === 'ios'); // Hide the picker on iOS after selecting a date
+    setShowDatePicker(Platform.OS === "ios"); // Hide the picker on iOS after selecting a date
     if (selectedDate) {
       setSelectedDate(selectedDate);
     }
   };
 
   return (
-    <SafeAreaView>
-      <View style={waterstyles.card}>
-        <Text style={waterstyles.card_title}>Water</Text>
+    <SafeAreaView style={styles.mainView}>
+      <View style={styles.card}>
+        <Text style={styles.card_title}>Water</Text>
 
         {/* Date of Water Intake (DatePicker) */}
         <TouchableOpacity onPress={() => setShowDatePicker(true)}>
           <TextInput
             placeholder="Date of Water Intake"
             placeholderTextColor="#8F9BB3"
-            style={waterstyles.text_box}
+            style={styles.text_box}
             value={selectedDate.toDateString()}
             editable={false} // Disable direct editing of the input
           />
@@ -45,8 +52,11 @@ const Water = () => {
         {/* Pen Name (Dropdown Picker) */}
         <Picker
           selectedValue={selectedPenName}
-          style={waterstyles.text_box}
-          onValueChange={(itemValue, itemIndex) => setSelectedPenName(itemValue)}>
+          style={styles.text_box}
+          onValueChange={(itemValue, itemIndex) =>
+            setSelectedPenName(itemValue)
+          }
+        >
           {penNames.map((name, index) => (
             <Picker.Item key={index} label={name} value={name} />
           ))}
@@ -55,7 +65,7 @@ const Water = () => {
         <TextInput
           placeholder="Amount of Water Intake"
           placeholderTextColor="#8F9BB3"
-          style={waterstyles.text_box}
+          style={styles.text_box}
         />
       </View>
     </SafeAreaView>
