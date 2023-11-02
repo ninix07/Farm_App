@@ -5,6 +5,8 @@ import Profile from "../../assets/Profile.png"; // Import your image
 import HomeStyles from "./styles/home-styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { BackHandler } from "react-native";
+import DetailCard from "../DetailCard/detailCard";
+import Sunlight from "../../assets/Sunlight.png";
 
 const Home = () => {
   const onBackPress = () => {
@@ -40,13 +42,15 @@ const Home = () => {
           <View>
             <Image
               source={Profile} // Use the imported image as the source
-              style={HomeStyles.image} // Specify width and height for the image
+              style={HomeStyles.image}
+              resizeMode="contain" // Specify width and height for the image
             />
           </View>
         </View>
       </LinearGradient>
-      <SafeAreaView></SafeAreaView>
-      {/* Not sure what you intend to do with the second SafeAreaView */}
+      <SafeAreaView>
+        <DetailCard ImageURL={Sunlight} Title="Sunlight" />
+      </SafeAreaView>
     </ScrollView>
   );
 };
