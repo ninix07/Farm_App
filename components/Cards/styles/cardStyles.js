@@ -24,8 +24,7 @@ const cardStyles = StyleSheet.create({
     color: "#222B45",
   },
   text_box: {
-    width: "100%",
-    height: 30,
+    height: 38,
     borderRadius: 15,
     borderWidth: 1,
     borderColor: "#EDF1F7",
@@ -39,6 +38,7 @@ const cardStyles = StyleSheet.create({
     fontSize: 18,
     textAlign: "left",
     color: "#8F9BB3",
+    
   },
   card_button: {
     fontFamily: "Roboto",
@@ -47,10 +47,50 @@ const cardStyles = StyleSheet.create({
     lineHeight: 22,
     letterSpacing: 0,
     textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
     borderRadius: 18,
-    borderWidth: 1,
-    borderColor: "#FFFFFF",
     marginTop: "2%",
+    backgroundColor: "#E61C38",
+    height: 38,
   },
+  button_text:{
+    fontFamily: "Roboto",
+    fontSize: 16,
+    fontWeight: "400",
+    lineHeight: 22,
+    letterSpacing: 0,
+    textAlign: "center",
+    color: "#FFFFFF",
+
+  },
+  subtext:{
+    fontFamily: "Roboto",
+    fontWeight: "400",
+    fontSize:14,
+    letterSpacing: 0,
+    borderColor: "#EDF1F7",
+    height: 38,
+    borderTopRightRadius: 15,
+    borderBottomRightRadius: 15,
+    width: "20%",
+    backgroundColor: "#E61C38",
+    color: "#FFFFFF",
+    textAlign: "center",
+    textAlignVertical: "center",
+  },
+  rowflex:{
+    display: "flex",
+    flexDirection: "row",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "space-between", // Adjust this to distribute the elements in the row
+    width: "100%", 
+  },
+  extended_text_box: {
+    width: "80%",
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0, 
+  }
 });
 export default cardStyles;
