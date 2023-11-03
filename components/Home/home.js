@@ -5,6 +5,7 @@ import Profile from "../../assets/Profile.png"; // Import your image
 import HomeStyles from "./styles/home-styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { BackHandler } from "react-native";
+import { useEffect } from "react";
 import DetailCard from "../DetailCard/detailCard";
 import Sunlight from "../../assets/Sunlight.png";
 import Humidity from "../../assets/humidity.png";
@@ -22,13 +23,24 @@ import Vaccine from "../../assets/vaccine.png";
 import Female from "../../assets/Female.png";
 
 const Home = ({ navigation }) => {
-  // const onBackPress = () => {
-  //   // Prevent going back by returning true (disabling the back action).
-  //   return true;
-  // };
+  //uncomment when no need back functionality to login
+  // useEffect(() => {
+  //   const handleHardwareBackPress = () => {
+  //     if (navigation.isFocused()) {
+  //       return true;
+  //     }
+  //     return false;
+  //   };
 
-  // Add a back button listener when the screen is focused.
-  // BackHandler.addEventListener("hardwareBackPress", onBackPress);
+  //   const backHandler = BackHandler.addEventListener(
+  //     "hardwareBackPress",
+  //     handleHardwareBackPress
+  //   );
+
+  //   return () => {
+  //     backHandler.remove();
+  //   };
+  // }, [navigation]);
   return (
     <ScrollView>
       <LinearGradient
@@ -61,26 +73,26 @@ const Home = ({ navigation }) => {
           </View>
         </View>
       </LinearGradient>
-      <SafeAreaView>
+      <View style={HomeStyles.cardContainer}>
         <DetailCard
           ImageURL={Sunlight}
-          Title="Sunlight"
+          Title="Light"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Light");
           }}
         />
         <DetailCard
           ImageURL={Humidity}
           Title="Humidity"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Humidity");
           }}
         />
         <DetailCard
           ImageURL={Male}
           Title="Male"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Male");
           }}
         />
         <DetailCard
@@ -94,21 +106,21 @@ const Home = ({ navigation }) => {
           ImageURL={Medicine}
           Title="Medicine"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Medicine");
           }}
         />
         <DetailCard
           ImageURL={Feed}
           Title="Feed"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Feed");
           }}
         />
         <DetailCard
           ImageURL={Egg}
           Title="Egg"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Egg");
           }}
         />
         {/* <DetailCard ImageURL={Mortality} Title="Mortality" /> */}
@@ -116,45 +128,45 @@ const Home = ({ navigation }) => {
           ImageURL={Temperature}
           Title="Temperature"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Temperature");
           }}
         />
         <DetailCard
           ImageURL={Weight}
           Title="Weight"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Weight");
           }}
         />
         <DetailCard
           ImageURL={Transfer}
           Title="Transfer"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Transfer");
           }}
         />
         <DetailCard
           ImageURL={Ventilation}
           Title="Ventilation"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Ventilation");
           }}
         />
         <DetailCard
           ImageURL={Vaccine}
           Title="Vaccine"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Vaccine");
           }}
         />
         <DetailCard
           ImageURL={Female}
           Title="Female"
           OnPressHandler={() => {
-            navigation.navigate("Water");
+            navigation.navigate("Female");
           }}
         />
-      </SafeAreaView>
+      </View>
     </ScrollView>
   );
 };

@@ -29,7 +29,7 @@ const Light = () => {
   return (
     <SafeAreaView style={styles.mainView}>
       <View style={styles.card}>
-        <Text style={styles.card_title}>Water</Text>
+        <Text style={styles.card_title}>LIGHT</Text>
 
         {/* Date of Water Intake (DatePicker) */}
         <TouchableOpacity onPress={() => setShowDatePicker(true)}>

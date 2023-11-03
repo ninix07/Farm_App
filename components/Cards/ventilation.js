@@ -12,7 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./styles/cardStyles";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-const ventilation = () => {
+const Ventilation = () => {
   const [selectedDate, setSelectedDate] = useState(new Date()); // Initialize with the current date
   const [selectedPenName, setSelectedPenName] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -29,7 +29,7 @@ const ventilation = () => {
   return (
     <SafeAreaView style={styles.mainView}>
       <View style={styles.card}>
-        <Text style={styles.card_title}>Water</Text>
+        <Text style={styles.card_title}>VENTILATION</Text>
 
         {/* Date of Water Intake (DatePicker) */}
         <TouchableOpacity onPress={() => setShowDatePicker(true)}>
@@ -78,4 +78,4 @@ const ventilation = () => {
   );
 };
 
-export default ventilation;
+export default Ventilation;

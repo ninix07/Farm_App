@@ -12,7 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./styles/cardStyles";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-const Weight = () => {
+const Medicine = () => {
   const [selectedDate, setSelectedDate] = useState(new Date()); // Initialize with the current date
   const [selectedPenName, setSelectedPenName] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -29,7 +29,7 @@ const Weight = () => {
   return (
     <SafeAreaView style={styles.mainView}>
       <View style={styles.card}>
-        <Text style={styles.card_title}>WEIGHTr</Text>
+        <Text style={styles.card_title}>MEDICINE</Text>
 
         {/* Date of Water Intake (DatePicker) */}
         <TouchableOpacity onPress={() => setShowDatePicker(true)}>
@@ -78,4 +78,4 @@ const Weight = () => {
   );
 };
 
-export default Weight;
+export default Medicine;
