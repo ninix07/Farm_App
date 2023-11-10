@@ -8,14 +8,14 @@ const cardStyles = StyleSheet.create({
     justifyContent: "center",
   },
   card: {
-    width: 345,
-    height: 296,
+    width: "90%",
+    height: "auto",
     borderRadius: 15,
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#ffffff",
-    padding: 28.31,
-    gap: 16.71,
+    padding: "8%",
+    gap: 17,
   },
   card_title: {
     fontFamily: "Roboto",
@@ -38,7 +38,6 @@ const cardStyles = StyleSheet.create({
     fontSize: 18,
     textAlign: "left",
     color: "#8F9BB3",
-    
   },
   card_button: {
     fontFamily: "Roboto",
@@ -54,7 +53,7 @@ const cardStyles = StyleSheet.create({
     backgroundColor: "#E61C38",
     height: 38,
   },
-  button_text:{
+  button_text: {
     fontFamily: "Roboto",
     fontSize: 16,
     fontWeight: "400",
@@ -62,12 +61,11 @@ const cardStyles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "center",
     color: "#FFFFFF",
-
   },
-  subtext:{
+  subtext: {
     fontFamily: "Roboto",
     fontWeight: "400",
-    fontSize:14,
+    fontSize: 14,
     letterSpacing: 0,
     borderColor: "#EDF1F7",
     height: 38,
@@ -79,18 +77,18 @@ const cardStyles = StyleSheet.create({
     textAlign: "center",
     textAlignVertical: "center",
   },
-  rowflex:{
+  rowflex: {
     display: "flex",
     flexDirection: "row",
     alignContent: "center",
     alignItems: "center",
     justifyContent: "space-between", // Adjust this to distribute the elements in the row
-    width: "100%", 
+    width: "100%",
   },
   extended_text_box: {
     width: "80%",
     borderTopRightRadius: 0,
-    borderBottomRightRadius: 0, 
-  }
+    borderBottomRightRadius: 0,
+  },
 });
 export default cardStyles;

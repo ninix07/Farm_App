@@ -24,7 +24,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-
         <Stack.Group
           screenOptions={{
             headerTitle: "",
@@ -33,27 +32,8 @@ export default function App() {
             headerLeft: null,
           }}
         >
-          <Stack.Screen
-            name="Login"
-            component={Login}
-            options={{
-              headerTitle: "",
-              headerShadowVisible: false,
-              headerTransparent: true,
-              animationTypeForReplace: "slide-vertical",
-            }}
-          />
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{
-              headerTitle: "",
-              headerShadowVisible: false,
-              headerTransparent: true,
-              headerLeft: null,
-              animationTypeForReplace: "slide-vertical",
-            }}
-          />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Home" component={Home} />
           <Stack.Group
             screenOptions={{
               presentation: "transparentModal",
