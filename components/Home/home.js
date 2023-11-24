@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Profile from "../../assets/Profile.png"; // Import your image
 import HomeStyles from "./styles/home-styles";
@@ -7,20 +7,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import { BackHandler } from "react-native";
 import { useEffect } from "react";
 import DetailCard from "../DetailCard/detailCard";
-import Sunlight from "../../assets/Sunlight.png";
-import Humidity from "../../assets/humidity.png";
-import Male from "../../assets/Male.png";
-import Water from "../../assets/water-bottle.png";
-import Medicine from "../../assets/medicine.png";
-import Feed from "../../assets/Feed.png";
-import Egg from "../../assets/Egg.jpg";
-// import Mortality from "../../assets/mortality.png";
-import Temperature from "../../assets/Temperature.png";
-import Weight from "../../assets/Weight.png";
-import Transfer from "../../assets/Transfer.png";
-import Ventilation from "../../assets/ventilation.png";
-import Vaccine from "../../assets/vaccine.png";
-import Female from "../../assets/Female.png";
 
 const Home = ({ navigation }) => {
   //uncomment when no need back functionality to login
@@ -41,6 +27,62 @@ const Home = ({ navigation }) => {
   //     backHandler.remove();
   //   };
   // }, [navigation]);
+  const mapdata = [
+    {
+      key: "Light",
+      title: "Light",
+      image: require("../../assets/Sunlight.png"),
+    },
+    {
+      key: "Humidity",
+      title: "Humidity",
+      image: require("../../assets/humidity.png"),
+    },
+    { key: "Male", title: "Male", image: require("../../assets/Male.png") },
+    {
+      key: "Water",
+      title: "Water",
+      image: require("../../assets/water-bottle.png"),
+    },
+    {
+      key: "Medicine",
+      title: "Medicine",
+      image: require("../../assets/medicine.png"),
+    },
+    { key: "Feed", title: "Feed", image: require("../../assets/Feed.png") },
+    { key: "Egg", title: "Egg", image: require("../../assets/Egg.jpg") },
+    {
+      key: "Temperature",
+      title: "Temperature",
+      image: require("../../assets/Temperature.png"),
+    },
+    {
+      key: "Weight",
+      title: "Weight",
+      image: require("../../assets/Weight.png"),
+    },
+    {
+      key: "Transfer",
+      title: "Transfer",
+      image: require("../../assets/Transfer.png"),
+    },
+    {
+      key: "Ventilation",
+      title: "Ventilation",
+      image: require("../../assets/ventilation.png"),
+    },
+    {
+      key: "Vaccine",
+      title: "Vaccine",
+      image: require("../../assets/vaccine.png"),
+    },
+    {
+      key: "Female",
+      title: "Female",
+      image: require("../../assets/Female.png"),
+    },
+  ];
+
   return (
     <ScrollView>
       <LinearGradient
@@ -73,99 +115,18 @@ const Home = ({ navigation }) => {
           </View>
         </View>
       </LinearGradient>
+
       <View style={HomeStyles.cardContainer}>
-        <DetailCard
-          ImageURL={Sunlight}
-          Title="Light"
-          OnPressHandler={() => {
-            navigation.navigate("Light");
-          }}
-        />
-        <DetailCard
-          ImageURL={Humidity}
-          Title="Humidity"
-          OnPressHandler={() => {
-            navigation.navigate("Humidity");
-          }}
-        />
-        <DetailCard
-          ImageURL={Male}
-          Title="Male"
-          OnPressHandler={() => {
-            navigation.navigate("Male");
-          }}
-        />
-        <DetailCard
-          ImageURL={Water}
-          Title="Water"
-          OnPressHandler={() => {
-            navigation.navigate("Water");
-          }}
-        />
-        <DetailCard
-          ImageURL={Medicine}
-          Title="Medicine"
-          OnPressHandler={() => {
-            navigation.navigate("Medicine");
-          }}
-        />
-        <DetailCard
-          ImageURL={Feed}
-          Title="Feed"
-          OnPressHandler={() => {
-            navigation.navigate("Feed");
-          }}
-        />
-        <DetailCard
-          ImageURL={Egg}
-          Title="Egg"
-          OnPressHandler={() => {
-            navigation.navigate("Egg");
-          }}
-        />
-        {/* <DetailCard ImageURL={Mortality} Title="Mortality" /> */}
-        <DetailCard
-          ImageURL={Temperature}
-          Title="Temperature"
-          OnPressHandler={() => {
-            navigation.navigate("Temperature");
-          }}
-        />
-        <DetailCard
-          ImageURL={Weight}
-          Title="Weight"
-          OnPressHandler={() => {
-            navigation.navigate("Weight");
-          }}
-        />
-        <DetailCard
-          ImageURL={Transfer}
-          Title="Transfer"
-          OnPressHandler={() => {
-            navigation.navigate("Transfer");
-          }}
-        />
-        <DetailCard
-          ImageURL={Ventilation}
-          Title="Ventilation"
-          OnPressHandler={() => {
-            navigation.navigate("Ventilation");
-          }}
-        />
-        <DetailCard
-          ImageURL={Vaccine}
-          Title="Vaccine"
-          OnPressHandler={() => {
-            navigation.navigate("Vaccine");
-          }}
-        />
-        <DetailCard
-          ImageURL={Female}
-          Title="Female"
-          OnPressHandler={() => {
-            navigation.navigate("Female");
-          }}
-        />
+        {mapdata.map((item) => (
+          <DetailCard
+            ImageURL={item.image}
+            Title={item.title}
+            OnPressHandler={() => {
+              navigation.navigate(item.title);
+            }}
+            key={item.key}
+          />
+        ))}
       </View>
     </ScrollView>
   );
